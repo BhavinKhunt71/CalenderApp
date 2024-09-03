@@ -2,7 +2,7 @@
   "expo": {
     "name": "CalenderApp",
     "slug": "CalenderApp",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon/icon.png",
     "scheme": "myapp",
@@ -21,7 +21,8 @@
         "foregroundImage": "./assets/icon/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.bhavinkhunt.CalenderApp"
+      "package": "com.bhavinkhunt.CalenderApp",
+      "versionCode": 2
     },
     "plugins": [
       "expo-router"

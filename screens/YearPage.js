@@ -54,7 +54,7 @@ const YearPage = () => {
   const ref = useRef();
   const currentYear = new Date().getFullYear(); // Get the current year
   const [selectedYear, setSelectedYear] = useState(currentYear);
-  const [currentDates, setCurrentDates] = useState(new Date());
+  const currentDates = new Date();
   const [selectedDay, setSelectedDay] = useState("");
   const [calendarKey, setCalendarKey] = useState(0); // Add a state for the calendar key
   const handleIncrementYear = useCallback(() => {
@@ -73,17 +73,6 @@ const YearPage = () => {
     for (let month = 1; month <= 12; month++) {
       const currentDate = new Date(selectedYear, month - 1);
       while (currentDate.getMonth() === month - 1) {
-        // if (currentDate.getDay() === 1) {
-        //   const formattedDate = currentDate.toISOString().split("T")[0];
-        //   result[formattedDate] = {
-        //     marked: true,
-        //     dotColor: "white",
-        //     color: "white",
-        //     selectedDotColor: "white",
-        //     selected: true,
-        //     selectedColor: "white",
-        //   };
-        // }
         if (currentDate.getDay() === 1) {
           result[currentDate.toISOString().split("T")[0]] = {
             customStyles: {
